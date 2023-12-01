@@ -3,7 +3,7 @@ import os
 path = os.getcwd() + r'/day_1/data.txt'
 
 
-def take_sum(file) -> int:
+def part_1(file) -> int:
     sum = 0
     n1 = None
     n2 = None
@@ -21,12 +21,15 @@ def take_sum(file) -> int:
 
                 n2 = int(ch)  # Always changes so it takes the last digit
 
+        # print(n1, n2, str(n1)+str(n2), sum)
         sum += int(str(n1) + str(n2))  # add the final integer
 
     return sum
 
 
 with open(path, "r", encoding="utf-8") as file:  # open data file
-    total = take_sum(file)
+    total = part_1(file)
 
 print(total)
+
+
